@@ -8,9 +8,9 @@ export const site = {
   role: "AI Product Experience Designer",
   tagline: "用设计让 AI 产品真正可用。",
   intro:
-    "6 年 UI/UX 与产品设计经验，正在转型 AI 产品体验设计师。我相信 AI 时代的设计师不是被替代，而是被放大——我用 AI 协作的方式，把研究、原型到实现的距离压缩到最短。",
+    "6 年 UI/UX 与产品设计经验，我相信 AI 时代的设计师不是被替代，而是被放大————我用 AI 协作的方式，把研究、原型到实现的距离压缩到最短。",
   location: "厦门 · 中国",
-  email: "hello@uu.design", // ← 改成你的真实邮箱
+  email: "929558004@qq.com", // ← 改成你的真实邮箱
   status: "正在求职 AI 产品体验设计师岗位，也接 AI 产品设计合作",
   stats: [
     { value: "6+", label: "年 UI/UX 与产品设计经验" },
@@ -34,8 +34,8 @@ export const site = {
   socials: [
     {
       label: "小红书",
-      handle: "@AI产品设计师UU",
-      url: "https://www.xiaohongshu.com", // ← 改成你的主页链接
+      handle: "UU｜AI产品设计师",
+      url: "https://xhslink.cn/o/6zMCNN1IKZW", // ← 改成你的主页链接
     },
     {
       label: "LinkedIn",
