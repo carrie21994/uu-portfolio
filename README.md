@@ -38,18 +38,32 @@ npm run dev
 
 ---
 
-## 三、发布上线（让别人也能访问）
+## 三、正式访问地址（已上线 ✅）
 
-1. 注册 [GitHub](https://github.com) 和 [Vercel](https://vercel.com)（免费）
-2. 把项目推到 GitHub：
+**https://thisisuu.com** —— 你的正式域名，手机/电脑都能打开，已配置 HTTPS 证书。
+
+- 域名：thisisuu.com（腾讯云购买，88 元/年，实名已通过）
+- 托管：腾讯云 EdgeOne（加速区域：全球可用区不含中国大陆）
+- 项目 ID：makers-titxilepnazk ｜ 部署 ID：dpzk2kbw9y2w
+- 代码备份：GitHub 仓库 https://github.com/carrie21994/uu-portfolio
+
+> ⚠️ 目前网站走"不含中国大陆"的海外加速节点，国内打开可用但速度一般。后续建议补做 ICP 备案（需购买可备案云资源），备案后可切到含大陆节点，国内访问更快更稳。
+
+---
+
+## 四、改完内容后怎么重新上线（每次更新必看）
+
+1. 改内容（见上文第二部分）后，在项目目录打开终端：
    ```bash
-   git add .
-   git commit -m "first version"
-   git remote add origin <你的仓库地址>
-   git push -u origin main
+   npm run build
    ```
-3. 在 Vercel 点 "Add New Project" → Import 这个仓库 → Deploy
-4. 完成后你会得到一个 `https://xxx.vercel.app` 链接，以后每次改内容 push 上去，网站自动更新
+2. 打包产物（产物在 `out/` 文件夹，整体压缩成一个 zip）：
+   ```bash
+   cd out && zip -r ../uu-portfolio-static.zip . && cd ..
+   ```
+3. 打开腾讯云 EdgeOne 控制台 → 项目「uu-portfolio」→「构建部署」→ 上传 `uu-portfolio-static.zip` 部署即可（或让豆包帮你完成）。
+
+GitHub 仓库仅作代码备份；网页版 GitHub 直接编辑含中文文件不可靠，改内容建议在本地或让 AI 改。
 
 ---
 
@@ -71,9 +85,10 @@ uu-portfolio/
 
 ---
 
-## 五、待办（上线前建议补）
+## 五、待办
 
-- [ ] 替换 `content/site.ts` 里的邮箱和社交链接
-- [ ] 给每个作品加上图片/视频（`public/media/`）
+- [x] 替换 `content/site.ts` 里的邮箱（929558004@qq.com）和社交链接（小红书 UU｜AI产品设计师）
+- [ ] 给每个作品加上图片/视频（`public/media/`，现为占位图）
 - [ ] 给「陪你想想」做一个详情页（`app/work/` 目录）
 - [ ] 文章板块替换成你的真实文章/小红书链接
+- [ ] 后续补做 ICP 备案（需购买 CVM/轻量服务器等可备案云资源），备案后把 EdgeOne 加速区域切到含中国大陆
